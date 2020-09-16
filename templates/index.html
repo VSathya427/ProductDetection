@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="static/css/style.css?q=1280549780">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<body>
+<hgroup>
+    <h1>Retail Product Detection</h1>
+</hgroup>
+<form action="{{ url_for('detect') }}" class="form-upload" method=post enctype=multipart/form-data>
+    <div class="row" style="text-align:center">
+       
+		<!--<p><a class="col-md" href="{{ url_for('camera') }}">Click Here for realtime detection</a></p>-->	
+        <div class="col-md">
+            <input type="file" id="validationImageArea" name="file" class="form-control" autofocus>
+        </div>
+    </div>
+    <div style="text-align:center">
+        <button type="submit" class="btn btn-primary mt-4">detect
+        </button>
+    </div>
+</form>
+<form style="text-align:center" action="{{ url_for('camera') }}" method="post">
+        <button type="submit" class="btn btn-primary mt-4">Click Here For Realtime Detection</button>
+</form>
+<div style="text-align:center">
+    {% if image_loc %}
+    <img src="{{image_loc}}" width="350" height="350">
+    {%endif%}
+</div>
+<footer>
+    <a href="https://github.com/" target="_blank"> <img src="https://image.flaticon.com/icons/svg/25/25231.svg"></a>
+    <p class="mt-2">Made by Sathya</a></p>
+</footer>
+</body>
+</html>

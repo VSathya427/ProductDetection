@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<p class="text-left">{{ fname }} successfully uploaded.</p>
+<div class="row">
+    <div class="col-md-5">
+        <div class="image-container">
+            <p class="text-center"><b>Original Image</b></p>     
+            <a href="/static/uploads/{{ fname }}" target="_new"><img src="/static/uploads/{{ fname }}" width="800" height="800" class="upload-image-thumb"></a>
+        </div>
+        <div class="upload-form">
+            <p class="text-left">Choose file to detect another image</p>
+            <form action = "/detect" method = "POST" 
+                              enctype = "multipart/form-data">
+                <input type = "file" name = "file" />
+                <input type = "submit"/>
+            </form>
+        </div>      
+    </div>
+ </div>
+</br>
+
+<div class="row">
+    <div class="col-md-5"> 
+    <div class="image-container">
+        <p class="text-center"><b>Detected Image</b></p>
+        <a href="/static/output/{{display_detection}}" target="_new"><img src="/static/output/{{display_detection}}" width="800" height="800" class="upload-image-thumb"></a> 
+    </div>
+<pre> 
+{{ text }} 
+</pre> 
+<pre> 
+{{ remove }} 
+</pre> 
+ </div>
+ <footer>
+    <a href="https://github.com/" target="_blank"> <img src="https://image.flaticon.com/icons/svg/25/25231.svg"></a>
+    <p class="mt-2">Made by Sathya</a></p>
+</footer>
+{% endblock %} 
+
