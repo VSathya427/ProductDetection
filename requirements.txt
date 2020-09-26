@@ -2,12 +2,12 @@
 Cython
 numpy>=1.18.5
 opencv-python
-torch>=1.5.1
+torch>=1.6.0
 matplotlib
 pillow
 tensorboard
 PyYAML>=5.3
-torchvision>=0.6
+torchvision>=0.7
 scipy
 tqdm
 Flask>=1.1.1
