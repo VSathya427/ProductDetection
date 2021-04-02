@@ -1,7 +1,12 @@
 # ProductDetection
+## Install the requirements
+The very first step would be to install the requirements which you can do by running the command :
+```
+pip install requirements.txt
+```
 ## Using the API for Inference
 
-To use your model as a API run the **detect_api.py** script as shown below:
+Then to use your model as a API run the **detect_api.py** script as shown below:
 
 ```
 python detect_api.py 
@@ -16,3 +21,4 @@ python detect_api.py  <GPU-device-number(s)>
 Example: python detect_api.py 1 # to use the GPU with device number '1'
 Example: python detect_api.py  0, 1, 2 # to use GPUs with dsimply change theevice values numbers '0', '1' and '2'
 ```
+and voila your webapi starts running!!!
